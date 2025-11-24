@@ -20,27 +20,56 @@ h1 {
     color: #333333;
 }
 
+/* Controls container holds the input and action buttons */
+.controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* Input field fills remaining space in controls */
 #todo-input {
-    width: calc(100% - 22px);
+    flex: 1;
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 4px;
-    margin-bottom: 10px;
 }
 
-#add-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
+/* Base styling for all buttons */
+button {
+    padding: 10px 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Primary action button */
+#add-btn {
+    background-color: #007bff;
+}
+
+/* Delete all button */
+#delete-all-btn {
+    background-color: #6c757d;
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    background-color: #17a2b8;
 }
 
 #add-btn:hover {
     background-color: #0056b3;
+}
+
+#delete-all-btn:hover {
+    background-color: #5a6268;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #117a8b;
 }
 
 #todo-list {
@@ -72,4 +101,72 @@ h1 {
 
 .remove-btn:hover {
     background-color: #c82333;
+}
+
+/* Edit button styling */
+.edit-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.edit-btn:hover {
+    background-color: #218838;
+}
+
+/* Checkbox for marking completion */
+.complete-checkbox {
+    margin-right: 8px;
+}
+
+/* Completed tasks show strikethrough text */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #777777;
+}
+
+/* Timestamp styling */
+.timestamp {
+    display: block;
+    font-size: 12px;
+    color: #999999;
+    margin-top: 4px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #eaeaea;
+}
+
+.dark-mode .container {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode h1 {
+    color: #ffffff;
+}
+
+.dark-mode #todo-input {
+    background-color: #3c3c3c;
+    color: #eaeaea;
+    border-color: #555555;
+}
+
+.dark-mode #todo-list li:nth-child(odd) {
+    background-color: #2e2e2e;
+}
+
+.dark-mode #todo-list li {
+    border-bottom-color: #444444;
+}
+
+.dark-mode .timestamp {
+    color: #aaaaaa;
 }

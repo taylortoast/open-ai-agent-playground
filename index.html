@@ -10,10 +10,17 @@
 <body>
     <div class="container">
         <h1>To‑Do List</h1>
-        <!-- Input field for new to‑do items -->
-        <input type="text" id="todo-input" placeholder="Enter a new task">
-        <!-- Button to add the new to‑do -->
-        <button id="add-btn">Add</button>
+        <!-- Controls for adding tasks and managing the list -->
+        <div class="controls">
+            <!-- Input field for new to‑do items -->
+            <input type="text" id="todo-input" placeholder="Enter a new task" aria-label="New task">
+            <!-- Button to add the new to‑do -->
+            <button id="add-btn">Add</button>
+            <!-- Button to delete all tasks -->
+            <button id="delete-all-btn">Delete All</button>
+            <!-- Dark mode toggle button -->
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
         <!-- Unordered list that will hold the to‑do items -->
         <ul id="todo-list"></ul>
     </div>
